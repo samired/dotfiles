@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+	<head>
+		<title>Feeds OPML Export</title>
+		<dateCreated>Sat Apr 11 2020 13:25:51 GMT+0200 (Eastern European Standard Time)</dateCreated>
+	</head>
+	<body>
+		<outline text="US Top News and Analysis" type="rss" version="RSS" htmlUrl="https://www.cnbc.com/us-top-news-and-analysis/" xmlUrl="https://www.cnbc.com/id/100003114/device/rss/rss.html"/>
+		<outline text="BBC Arabic - الرئيسية" type="rss" version="RSS" htmlUrl="http://www.bbcarabic.com/" xmlUrl="http://feeds.bbci.co.uk/arabic/rss.xml"/>
+		<outline text="Masrawy-أخبار" type="rss" version="RSS" htmlUrl="https://www.masrawy.com/" xmlUrl="https://www.masrawy.com/rssfeed/25/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1"/>
+		<outline text="Ars Technica" type="rss" version="RSS" htmlUrl="https://arstechnica.com/" xmlUrl="https://arstechnica.com/rss"/>
+		<outline text="Fast Company" type="rss" version="RSS" htmlUrl="https://www.fastcompany.com/" xmlUrl="https://www.fastcompany.com/latest/rss?truncated=true"/>
+		<outline text="Phys.org - latest science and technology news stories" type="rss" version="RSS" htmlUrl="https://phys.org/" xmlUrl="https://phys.org/rss-feed/"/>
+		<outline text="TED Talks Daily (SD video)" type="rss" version="RSS" htmlUrl="https://www.ted.com/talks" xmlUrl="http://feeds.feedburner.com/TEDTalks_video"/>
+		<outline text="Data Science Central" type="rss" version="RSS" htmlUrl="" xmlUrl="http://feeds.feedburner.com/FeaturedBlogPosts-DataScienceCentral"/>
+		<outline text="John D. Cook" type="rss" version="RSS" htmlUrl="https://www.johndcook.com/blog" xmlUrl="https://www.johndcook.com/blog/feed/"/>
+		<outline text="Seth&apos;s Blog" type="rss" version="RSS" htmlUrl="https://seths.blog/" xmlUrl="https://seths.blog/feed/atom"/>
+		<outline text="Outside Magazine: All" type="rss" version="RSS" htmlUrl="https://www.outsideonline.com/rss/all/rss.xml" xmlUrl="https://www.outsideonline.com/rss/all/rss.xml"/>
+		<outline text="Live Better With Less" type="rss" version="RSS" htmlUrl="https://www.reddit.com/r/simpleliving/" xmlUrl="https://www.reddit.com/r/simpleliving/.rss"/>
+		<outline text="minimalism" type="rss" version="RSS" htmlUrl="https://www.reddit.com/r/minimalism/" xmlUrl="https://www.reddit.com/r/minimalism/.rss"/>
+		<outline text="reddit: the front page of the internet" type="rss" version="RSS" htmlUrl="https://www.reddit.com/" xmlUrl="https://www.reddit.com/.rss"/>
+	</body>
+</opml>
