@@ -1,6 +1,7 @@
-* K
+* k
 - https://vrabi.web.elte.hu/k/
 - http://rosettacode.org/wiki/Category:K
 
 * j
 - https://code.jsoftware.com/wiki/Interfaces
+- https://code.jsoftware.com/wiki/User:Oleg_Kobchenko/Essays
