@@ -1,0 +1,17 @@
+Local Variables:  
+mode: org           
+comment-column: 0 
+End:              
+#+TITLE: Samir's Space
+
+#+HTML_HEAD:  <style type="text/css">body{margin:40px auto;font-family: sans-serif;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1,h2,h3{line-height:1.2}.h-entry a {text-decoration: none;} aside {font-size: 90%; border: 1px solid whitesmoke; padding: 3em;}@media (prefers-color-scheme: dark) { body { background-color: #444; color: #e4e4e4; } a { color: #e39777; } }</style>
+
+#+SUBTITLE: where I write my thoughts
+
+#+HTML_HEAD: <link id="pagestyle" rel="stylesheet" type="text/css" href="css/worg_style_worg.css"/>
+
+#+OPTIONS: toc:t num:0 H:4 ^:nil pri:t
+
+#+MACRO: kbd @@html:<kbd>$1</kbd>@@
+
+#+BEGIN_EXPORT html
