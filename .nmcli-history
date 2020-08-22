@@ -1,0 +1,9 @@
+[ccae7ad3-9d60-45d1-81bb-263a358e037e]
+0=802-11-wireless 
+1=q
+2=yes
+
+[31e394e1-d8de-45cc-8599-4b7900d1261b]
+0=describe wifi-sec
+1=exit
+2=quit

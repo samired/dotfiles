@@ -1,0 +1,15 @@
+1 + 1
+sin 30
+sin(30)
+plot 
+plot (1,2,3,4)
+plot (1,2,3,4, 1 2 3 4)
+plot (1,2,3,4, 1, 2, 3, 4)
+range (10)
+arange (10)
+range
+arange (10, 0.1)
+range (10, 0.1)
+range (0.1,10)
+exit
+# Octave 4.4.1, Mon Sep 16 11:50:19 2019 EET <samir@Scheme>

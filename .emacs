@@ -1,91 +1,71 @@
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(require 'cl)
+(require 'package)
+
+(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20190323.213")
+(require 'powerline) 
+;;; either the stable version:
+
+(add-to-list 'package-archives
+  ;; choose either the stable or the latest git version:
+  ;; '("melpa-stable" . "http://stable.melpa.org/packages/")
+  '("melpa-unstable" . "http://melpa.org/packages/"))
+
+(package-initialize)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
- '(auto-indent-next-pair-timer-geo-mean (quote ((default 0.0005 0))))
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(column-number-mode t)
- '(custom-enabled-themes (quote (deeper-blue)))
- '(custom-safe-themes (quote ("71efabb175ea1cf5c9768f10dad62bb2606f41d110152f4ace675325d28df8bd" default)))
+ '(custom-enabled-themes (quote (dorsey)))
+ '(custom-safe-themes
+   (quote
+    ("886f1b2bb72d155e438975d2b2e98f34d0f6f563d02519e61e567bb8fefa3ee9" "96998f6f11ef9f551b427b8853d947a7857ea5a578c75aa9c4e7c73fe04d10b4" "c48551a5fb7b9fc019bf3f61ebf14cf7c9cdca79bcb2a4219195371c02268f11" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" "e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "e9776d12e4ccb722a2a732c6e80423331bcb93f02e089ba2a4b02e85de1cf00e" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "b3775ba758e7d31f3bb849e7c9e48ff60929a792961a2d536edec8f68c671ca5" default)))
  '(display-battery-mode t)
  '(display-time-mode t)
- '(ede-project-directories (quote ("c:/Documents and Settings/user/Desktop/hydeval" "e:/test/hydraulics")))
- '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(global-ede-mode t)
- '(indicate-buffer-boundaries (quote left))
+ '(fringe-mode 0 nil (fringe))
+ '(line-number-mode nil)
+ '(linum-format " %7i ")
+ '(package-selected-packages
+   (quote
+    (gnu-elpa-keyring-update cider go-mode sublime-themes shrink-path powerline-evil memoize geiser)))
+ '(powerline-default-separator (quote arrow))
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
- '(show-paren-mode t)
  '(size-indication-mode t)
- '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-server "brmjt.com")
  '(smtpmail-smtp-service 25)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(tooltip-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil))))
+ '(mode-line ((t (:foreground "#bdbdbd" :background "#1d1d1d" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+;; j-mode 
+(autoload 'j-mode "j-mode.el"  "Major mode for J." t)
+(autoload 'j-shell "j-mode.el" "Run J from emacs." t)
+(setq auto-mode-alist
+      (cons '("\\.ij[rstp]" . j-mode) auto-mode-alist))
 
-;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;;  
-  
-;(define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
-  
-;; ;; ;; ;; ;; ;; ;; ;; ;; ;; 
-;; 
-;; 
-;; 
-;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;;  
-(package-initialize)
-(setq-default inhibit-startup-screen t)
+;;;;;;;;;;;;;;;;;;;;;;
+;J-Mode:
+;;;;;;;;;;;;;;;;;;;;;;
 
-;; Of course, don't uncomment the line below -- doing so would
-;; stop Emacs from helpfully leaving "foo~" (backup) files all
-;; over the place.
-(setq make-backup-files nil)
+(setq j-path "~/j902/bin/")
+(setq j-command "jconsole")
+(when (ignore-errors (require 'which-func))
+   (which-func-mode 1)) ; shows the current function in statusbar
 
-;; Use only spaces (no tabs at all).
-(setq-default indent-tabs-mode nil)
-
-;; Always show column numbers.
-(setq-default column-number-mode t)
-
-;; Display full pathname for files.
-;(add-hook 'find-file-hooks
-;          '(lambda ()
-;             (setq mode-line-buffer-identification 'buffer-file-truename)))
-
-;; For easy window scrolling up and down.
-(global-set-key "\M-n" 'scroll-up-line)
-(global-set-key "\M-p" 'scroll-down-line)
-
-;; For easier regex search/replace.
-(defalias 'qrr 'query-replace-regexp)
-
-;; My own preference. Change or comment out the following lines if you like.
-(load-theme 'deeper-blue t)
-(set-background-color "#383838")
-
-;;
-;;
-;; Markdown Mode
-(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(put 'upcase-region 'disabled nil)
-(global-set-key "\M-Z" 'nrepl-jack-in)
-(global-set-key "\M-X" 'paredit-mode)
-
-
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/")
-             '("melpa" . "http://melpa.milkbox.net/packages/"))
-
-(unless (package-installed-p 'clojure-mode)
-  (package-refresh-contents)
-  (package-install 'clojure-mode))
-
-(global-set-key (kbd "M-l") (lambda () (interactive) (insert "\u03bb"))) ;lambda
-(global-set-key (kbd "M-f") (lambda () (interactive) (insert "\u0192"))) ;function
-(global-set-key (kbd "M-d") (lambda () (interactive) (insert "(defn )"))) ;function
